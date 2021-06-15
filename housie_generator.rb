@@ -1,5 +1,5 @@
-def print_random_housie_ticekt
-  grid = random_housie
+def print_random_housie_ticekt()
+  grid = random_housie()
   grid.each do |row|
     p row.join("       ")
   end  
@@ -11,7 +11,7 @@ def unsorted_lookup_range(i)
   (lower_range..upper_range).to_a.sort{ rand() - 0.5}
 end
 
-def random_housie
+def random_housie()
   rows = 3
   columns = 9
   numbers = []
@@ -39,3 +39,5 @@ def random_housie
 
   return grid
 end
+
+print_random_housie_ticekt()
